@@ -8,6 +8,7 @@ title __GENERAL's Class Diagram__\n
         ~ name : String
         + Burger()
         + Calories()
+        + Calories_per_100g()
         + price()
         + toString()
         + weight()
@@ -21,6 +22,7 @@ title __GENERAL's Class Diagram__\n
         - cal_100 : double
         - weight : double
         + Calories()
+        + Calories_per_100g()
         + Cheddar()
         + price()
         + toString()
@@ -35,6 +37,7 @@ title __GENERAL's Class Diagram__\n
         - cal_100 : double
         - weight : double
         + Calories()
+        + Calories_per_100g()
         + DeepFriedOnions()
         + price()
         + toString()
@@ -45,7 +48,6 @@ title __GENERAL's Class Diagram__\n
 
   namespace original.api.general {
     interface original.api.general.Food {
-        {abstract} + calories_per_100g()
     }
   }
   
@@ -53,6 +55,7 @@ title __GENERAL's Class Diagram__\n
   namespace original.api.general {
     interface original.api.general.Foodproduct {
         {abstract} + Calories()
+        {abstract} + Calories_per_100g()
     }
   }
   
@@ -61,6 +64,7 @@ title __GENERAL's Class Diagram__\n
     class original.api.general.Meat {
         - weight : double
         + Calories()
+        + Calories_per_100g()
         + Meat()
         + calories()
         + price()
@@ -91,7 +95,9 @@ title __GENERAL's Class Diagram__\n
         {static} - BASE_PRICE : double
         - weight : double
         + Calories()
+        + Calories_per_100g()
         + Sauce()
+        + calories()
         + price()
         + toString()
         + weight()
@@ -114,6 +120,7 @@ title __GENERAL's Class Diagram__\n
         - cal : double
         - weight : double
         + Calories()
+        + Calories_per_100g()
         + Tomato()
         + price()
         + toString()
