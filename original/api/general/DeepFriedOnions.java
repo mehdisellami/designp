@@ -1,6 +1,6 @@
 package original.api.general;
 
-public class DeepFriedOnions implements Product {
+public class DeepFriedOnions implements Foodproduct {
     // 590 kcal / 100g
 
     private double weight;
@@ -27,7 +27,7 @@ public class DeepFriedOnions implements Product {
         return (cal_100*weight)/100 ;
     }
 
-    @Override
+
     public double Calories_per_100g() {
         return (Calories()*100)/weight;
     }

@@ -4,12 +4,12 @@ import java.util.List;
 
 import static java.lang.Math.round;
 
-public class Burger implements Product {
+public class Burger implements Foodproduct {
 
     String name;
-    List<Product> items;
+    List<Foodproduct> items;
 
-    public Burger(String name, List<Product> items) {
+    public Burger(String name, List<Foodproduct> items) {
         this.name = name;
         this.items = items;
     }
@@ -29,7 +29,7 @@ public class Burger implements Product {
 
 
 
-    @Override
+
     public double Calories_per_100g() {
         return round((Calories()*100)/weight());
     }
@@ -52,8 +52,8 @@ public class Burger implements Product {
         buffer.append(String.format("price:         %.2f\n", price()));
         buffer.append(DELIM);
         buffer.append(DELIM);
-        buffer.append(String.format("Calories:         %.2f\n", Calories()));
-        buffer.append(String.format("Calories/100g:         %.2f\n", Calories_per_100g()));
+        buffer.append(String.format("Calories:         %.0f\n", Calories()));
+        buffer.append(String.format("Calories/100g:         %.0f\n", Calories_per_100g()));
         buffer.append(DELIM);
 
 

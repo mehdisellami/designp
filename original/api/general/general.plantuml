@@ -48,6 +48,7 @@ title __GENERAL's Class Diagram__\n
 
   namespace original.api.general {
     interface original.api.general.Food {
+        {abstract} + Calories_per_100g()
     }
   }
   
@@ -55,7 +56,6 @@ title __GENERAL's Class Diagram__\n
   namespace original.api.general {
     interface original.api.general.Foodproduct {
         {abstract} + Calories()
-        {abstract} + Calories_per_100g()
     }
   }
   

@@ -1,6 +1,6 @@
 package original.api.general;
 
-public class Cheddar implements Product {
+public class Cheddar implements Foodproduct {
     // 400 kcal / 100g
 
     private double weight;
@@ -26,7 +26,7 @@ public class Cheddar implements Product {
         return (cal_100*weight)/100;
     }
 
-    @Override
+
     public double Calories_per_100g() {
         return (Calories()*100)/weight;
     }

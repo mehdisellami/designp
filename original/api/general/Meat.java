@@ -1,6 +1,6 @@
 package original.api.general;
 
-public class Meat implements Product {
+public class Meat implements Foodproduct {
 
     public enum MeatType {
         BEEF, WHITEFISH;
@@ -40,7 +40,7 @@ public class Meat implements Product {
             return cal;
         }
         else if (type == MeatType.BEEF) {
-            cal = 200;
+            cal = (200* weight) / 100;
             return cal;
         }
         return cal; }
@@ -63,7 +63,7 @@ public class Meat implements Product {
         return calories();
     }
 
-    @Override
+
     public double Calories_per_100g() {
         return (Calories()*100)/weight;
     }

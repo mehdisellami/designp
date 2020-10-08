@@ -1,6 +1,6 @@
 package original.api.general;
 
-public class Tomato implements Product {
+public class Tomato implements Foodproduct {
 
     private double weight;
     private double BASE_PRICE = 0.5;
@@ -25,7 +25,7 @@ public class Tomato implements Product {
         return (cal*weight)/100;
     }
 
-    @Override
+
     public double Calories_per_100g() {
         return (Calories()*100)/weight;
     }

@@ -1,6 +1,6 @@
 package original.api.general;
 
-public interface Product extends Foodproduct {
+public interface Product  {
     double weight();
 
     double price();

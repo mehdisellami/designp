@@ -21,13 +21,13 @@ title __TD1's Class Diagram__\n
   
 
   namespace original.api.general {
-    interface original.api.general.Food {
+    interface original.api.general.Food{
     }
   }
   
 
   namespace original.api.general {
-    interface original.api.general.Foodproduct {
+    interface original.api.general.Foodproduct extends Food,Product  {
     }
   }
   
@@ -62,14 +62,16 @@ title __TD1's Class Diagram__\n
   }
   
 
-  original.api.general.Burger .up.|> original.api.general.Product
-  original.api.general.Cheddar .up.|> original.api.general.Product
-  original.api.general.DeepFriedOnions .up.|> original.api.general.Product
-  original.api.general.Meat .up.|> original.api.general.Product
+  original.api.general.Burger .right.|> original.api.general.Foodproduct
+  original.api.general.Cheddar .up.|> original.api.general.Foodproduct
+  original.api.general.DeepFriedOnions .up.|> original.api.general.Foodproduct
+  original.api.general.Meat .up.|> original.api.general.Foodproduct
   original.api.general.Meat o-- original.api.general.Meat.MeatType : type
-  original.api.general.Sauce .up.|> original.api.general.Product
+  original.api.general.Sauce .up.|> original.api.general.Foodproduct
   original.api.general.Sauce o-- original.api.general.Sauce.SauceType : type
-  original.api.general.Tomato .up.|> original.api.general.Product
+  original.api.general.Tomato .up.|> original.api.general.Foodproduct
+  original.client.App o-- original.api.general.Burger : Choose
+  original.client.App o-- original.api.restaurant.TypeResto : Choose
 
 
 right footer

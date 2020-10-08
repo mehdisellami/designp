@@ -1,8 +1,8 @@
 package original.api.general;
 
-public class Sauce implements Product {
+public class Sauce implements Foodproduct {
 
-    public static enum SauceType {
+    public static enum SauceType implements Food {
         BURGER, BARBECUE, BEARNAISE;
         // BURGER : 240 kcal / 100g
         // BARBECUE : 130 kcal / 100g
@@ -23,7 +23,25 @@ public class Sauce implements Product {
             }
             return cal;
         }
-    }
+
+        @Override
+        public double Calories_per_100g() {
+            double cal_100;
+            switch (this) {
+                case BURGER:
+                    cal_100 = 240;
+                    break;
+                case BARBECUE:
+                    cal_100=130;
+                    break;
+                case BEARNAISE:
+                default:
+                    cal_100 = 550;
+            }
+            return cal_100;
+        }
+        }
+
 
     private static double BASE_PRICE = 1;
 
@@ -68,7 +86,7 @@ public class Sauce implements Product {
         return calories();
     }
 
-    @Override
+
     public double Calories_per_100g() {
         return (calories()*100)/weight;
     }

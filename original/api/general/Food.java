@@ -1,5 +1,5 @@
 package original.api.general;
 
-public interface Food extends Foodproduct {
-
+public interface Food  {
+    double Calories_per_100g();
 }
