@@ -70,8 +70,13 @@ title __TD1's Class Diagram__\n
   original.api.general.Sauce .up.|> original.api.general.Foodproduct
   original.api.general.Sauce o-- original.api.general.Sauce.SauceType : type
   original.api.general.Tomato .up.|> original.api.general.Foodproduct
-  original.client.App o-- original.api.general.Burger : Choose
+  original.client.App .down.|> original.api.general.Burger : Choose
   original.client.App o-- original.api.restaurant.TypeResto : Choose
+
+  original.client.App o-- original.burger.TypeMenu : Choose
+  original.client.App o-- original.burger.TailleMenu : Choose
+   original.client.App o-- original.burger.Quantiteingred : Choose
+  original.burger.Quantiteingred .up.|> original.api.general.Foodproduct
 
 
 right footer
